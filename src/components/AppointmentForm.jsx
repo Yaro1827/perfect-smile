@@ -84,19 +84,14 @@ export default function AppointmentForm() {
               allowEmptyFormatting
               mask="_"
               value={formData.phone}
-              // values.value повертає чисті цифри без маски, що зручно для бази даних
               onValueChange={(values) => {
                 setFormData({ ...formData, phone: values.value });
               }}
-              customInput={(inputProps) => (
-                <input
-                  {...inputProps}
-                  type="tel"
-                  className={`w-full border rounded-xl px-3 py-2.5 text-sm outline-none transition-colors
-          ${errors.phone ? 'border-red-400' : 'border-gray-300 focus:border-accent'}`}
-                  placeholder="+38 (0__) ___-__-__"
-                />
-              )}
+              customInput="input"
+              type="tel"
+              placeholder="+38 (0__) ___-__-__"
+              className={`w-full border rounded-xl px-3 py-2.5 text-sm outline-none transition-colors
+              ${errors.phone ? 'border-red-400' : 'border-gray-300 focus:border-accent'}`}
             />
             {errors.phone && <p className='text-red-500 text-xs mt-1'>{errors.phone}</p>}
           </fieldset>
