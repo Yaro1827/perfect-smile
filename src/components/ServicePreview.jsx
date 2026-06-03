@@ -45,7 +45,7 @@ export default function ServicePreview() {
                     </div>
                 ))}
                 <div className='mt-10 felx justify-center'>
-                    <Link to="/about">
+                    <Link to="/services">
                         <Button variant='accent' size='lg'>
                             Всі наші послуги
                         </Button>
