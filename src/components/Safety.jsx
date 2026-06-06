@@ -21,7 +21,7 @@ export default function Safety() {
       <div className='grid md:grid-cols-2 gap-6'>
         <div className='bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition duration-300'>
           <h3 className='text-xl font-semibold text-gray-800 mt-3 mb-3'>
-            Євпропейські стандарти стерилізації
+            Європейські стандарти стерилізації
           </h3>
           <p>
             У клініці Perfect Smile, наші інструменти проходять триетапний цикл по всім європейським стандартам стерилізації:
