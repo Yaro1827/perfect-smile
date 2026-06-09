@@ -6,7 +6,7 @@ import ClinikIMG from '../assets/images/clinik.jpg';
 import Button from '../components/Button';
 import ServicePreview from '../components/ServicePreview';
 import AboutShort from '../components/AboutShort';
-import Safety from '../components/safety';
+import Safety from '../components/Safety';
 import ModalWind from '../components/ModalWind';
 
 export default function Home() {
