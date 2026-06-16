@@ -29,8 +29,25 @@ export default function AppointmentForm() {
 
   const validate = () => {
     const newErrors = {};
-    if (formData.name.length < 2) newErrors.name = "Ім'я занадто коротке";
-    if (formData.phone.includes('_')) newErrors.phone = "Введіть повний номер телефону";
+
+    const nameRegex = /^[A-Za-zА-Яа-яЄєІіЇїҐґ'’\s\-]+$/;
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Будь ласка, введіть своє ім'я";
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = "Ім'я занадто коротке";
+    } else if (!nameRegex.test(formData.name)) {
+      newErrors.name = "Ім'я може містити лише літери";
+    }
+
+
+    if (!formData.phone) {
+      newErrors.phone = "Будь ласка, введіть номер телефону";
+    } else if (formData.phone.length < 9) {
+      newErrors.phone = "Введіть повний номер телефону (9 цифр)"
+    }
+
+
     if (!formData.service) newErrors.service = "Оберіть послугу";
 
     setErrors(newErrors);
